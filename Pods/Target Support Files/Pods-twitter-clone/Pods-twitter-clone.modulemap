@@ -1,0 +1,6 @@
+framework module Pods_twitter_clone {
+  umbrella header "Pods-twitter-clone-umbrella.h"
+
+  export *
+  module * { export * }
+}
