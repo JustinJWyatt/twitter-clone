@@ -13,6 +13,9 @@
 		BB810D8E21B61C5200A4D2A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB810D8D21B61C5200A4D2A2 /* Assets.xcassets */; };
 		BB810D9121B61C5200A4D2A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB810D8F21B61C5200A4D2A2 /* LaunchScreen.storyboard */; };
 		BB810D9921B61C8300A4D2A2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810D9821B61C8300A4D2A2 /* HomeController.swift */; };
+		BB810D9B21B6321300A4D2A2 /* HomeDataSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810D9A21B6321300A4D2A2 /* HomeDataSourceController.swift */; };
+		BB810DA021B636F800A4D2A2 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810D9F21B636F800A4D2A2 /* Cells.swift */; };
+		BB810DA221B6372500A4D2A2 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810DA121B6372500A4D2A2 /* HomeDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		BB810D9021B61C5200A4D2A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB810D9221B61C5200A4D2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB810D9821B61C8300A4D2A2 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		BB810D9A21B6321300A4D2A2 /* HomeDataSourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSourceController.swift; sourceTree = "<group>"; };
+		BB810D9F21B636F800A4D2A2 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		BB810DA121B6372500A4D2A2 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,9 @@
 		BB810D8521B61C5100A4D2A2 /* twitter-clone */ = {
 			isa = PBXGroup;
 			children = (
+				BB810D9E21B636D600A4D2A2 /* View */,
+				BB810D9D21B636CF00A4D2A2 /* Model */,
+				BB810D9C21B636C000A4D2A2 /* Controller */,
 				BB810D8621B61C5100A4D2A2 /* AppDelegate.swift */,
 				BB810D9821B61C8300A4D2A2 /* HomeController.swift */,
 				BB810D8A21B61C5100A4D2A2 /* Main.storyboard */,
@@ -86,6 +95,30 @@
 				BB810D9221B61C5200A4D2A2 /* Info.plist */,
 			);
 			path = "twitter-clone";
+			sourceTree = "<group>";
+		};
+		BB810D9C21B636C000A4D2A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB810D9A21B6321300A4D2A2 /* HomeDataSourceController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BB810D9D21B636CF00A4D2A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB810DA121B6372500A4D2A2 /* HomeDataSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BB810D9E21B636D600A4D2A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB810D9F21B636F800A4D2A2 /* Cells.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB810DA221B6372500A4D2A2 /* HomeDataSource.swift in Sources */,
+				BB810D9B21B6321300A4D2A2 /* HomeDataSourceController.swift in Sources */,
+				BB810DA021B636F800A4D2A2 /* Cells.swift in Sources */,
 				BB810D9921B61C8300A4D2A2 /* HomeController.swift in Sources */,
 				BB810D8721B61C5100A4D2A2 /* AppDelegate.swift in Sources */,
 			);
