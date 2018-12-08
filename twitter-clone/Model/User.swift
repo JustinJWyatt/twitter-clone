@@ -8,35 +8,103 @@
 
 import Foundation
 
-struct User: Decodable {
-    
-    let id: Int32
-    let name: String
-    let email: String
-    let address: Address
-    let phone: String
-    let website: String
-    let company: Company
-    let username: String
-}
 
-struct Address: Codable{
+public struct User: Decodable {
     
-    let street: String
-    let suite: String
-    let city: String
-    let zipcode: String
-    let geo: Geo
+    public let cell : String
+    public let dob : Dob
+    public let email : String
+    public let gender : String
+    public let id : Id
+    public let location : Location
+    public let login : Login
+    public let name : Name
+    public let nat : String
+    public let phone : String
+    public let picture : Picture
+    public let registered : Registered
     
 }
 
-struct Company: Codable{
-    let name: String
-    let catchPhrase: String
-    let bs: String
+public struct Registered : Decodable{
+    
+    public let age : Int
+    public let date : String
+    
 }
 
-struct Geo: Codable{
-    let lat: String
-    let lng: String
+public struct Picture : Decodable{
+    
+    public let large : String
+    public let medium : String
+    public let thumbnail : String
+    
+}
+
+public struct Name : Decodable {
+    
+    public let first : String
+    public let last : String
+    public let title : String
+    
+}
+
+public struct Login : Decodable{
+    
+    public let md5 : String
+    public let password : String
+    public let salt : String
+    public let sha1 : String
+    public let sha256 : String
+    public let username : String
+    public let uuid : String
+    
+}
+
+public struct Location : Decodable {
+    
+    public let city : String
+    public let coordinates : Coordinate
+    public let postcode : Int
+    public let state : String
+    public let street : String
+    public let timezone : Timezone
+    
+}
+
+public struct Timezone : Decodable{
+    
+    public let descriptionField : String
+    public let offset : String
+    
+}
+
+public struct Coordinate : Decodable{
+    
+    public let latitude : String
+    public let longitude : String
+    
+}
+
+public struct Id : Decodable {
+    
+    public let name : String
+    public let value : String
+    
+}
+
+public struct Dob : Decodable {
+    
+    public let age : Int
+    public let date : String
+    
+}
+
+public struct Info : Decodable {
+    
+    public let page : Int
+    public let results : Int
+    public let seed : String
+    public let version : String
+    
 }

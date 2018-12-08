@@ -50,9 +50,9 @@ class UserCell: DatasourceCell {
     override var datasourceItem: Any? {
         didSet{
             guard let user = datasourceItem as! User? else { return }
-            nameLabel.text = user.name
-            userNameLabel.text = user.username
-            bioTextView.text = user.website
+            nameLabel.text = user.name.first + " " + user.name.last
+            userNameLabel.text = user.email
+            bioTextView.text = user.name.first
         }
     }
     
@@ -68,14 +68,12 @@ class UserCell: DatasourceCell {
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "First User"
         label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
     }()
     
     let userNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "@first_user"
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = UIColor(r: 130, g: 130, b: 130)
         return label
@@ -83,7 +81,6 @@ class UserCell: DatasourceCell {
     
     let bioTextView: UITextView = {
        let textView = UITextView()
-        textView.text = "iPhone, iPad, iOS Programming Community. Join us to learn Swift, Objective-C and build iOS apps"
         textView.backgroundColor = UIColor.clear
         textView.font = UIFont.systemFont(ofSize: 15)
         return textView
