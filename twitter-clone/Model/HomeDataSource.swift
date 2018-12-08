@@ -8,10 +8,15 @@
 
 import Foundation
 import LBTAComponents
+import Alamofire
 
 class HomeDataSource: Datasource {
     
-    let words = ["1", "2", "3", "4", "5", "6"]
+    init(users: [User]){
+        self.users = users
+    }
+    
+    var users = [User]()
     
     override func headerClasses() -> [DatasourceCell.Type]? {
         return [UserHeader.self]
@@ -26,10 +31,11 @@ class HomeDataSource: Datasource {
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
-        return words[indexPath.item]
+        
+        return users[indexPath.item]
     }
     
     override func numberOfItems(_ section: Int) -> Int {
-        return words.count
+        return users.count
     }
 }

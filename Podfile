@@ -7,5 +7,6 @@ target 'twitter-clone' do
 
   # Pods for twitter-clone
   pod 'LBTAComponents'
+  pod 'Alamofire'
 
 end

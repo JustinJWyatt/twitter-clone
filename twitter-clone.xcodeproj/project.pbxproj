@@ -16,6 +16,7 @@
 		BB810D9B21B6321300A4D2A2 /* HomeDataSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810D9A21B6321300A4D2A2 /* HomeDataSourceController.swift */; };
 		BB810DA021B636F800A4D2A2 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810D9F21B636F800A4D2A2 /* Cells.swift */; };
 		BB810DA221B6372500A4D2A2 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810DA121B6372500A4D2A2 /* HomeDataSource.swift */; };
+		BB810DA421B8409E00A4D2A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810DA321B8409E00A4D2A2 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BB810D9A21B6321300A4D2A2 /* HomeDataSourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSourceController.swift; sourceTree = "<group>"; };
 		BB810D9F21B636F800A4D2A2 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		BB810DA121B6372500A4D2A2 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		BB810DA321B8409E00A4D2A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				BB810DA121B6372500A4D2A2 /* HomeDataSource.swift */,
+				BB810DA321B8409E00A4D2A2 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,12 +202,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-twitter-clone/Pods-twitter-clone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +248,7 @@
 			files = (
 				BB810DA221B6372500A4D2A2 /* HomeDataSource.swift in Sources */,
 				BB810D9B21B6321300A4D2A2 /* HomeDataSourceController.swift in Sources */,
+				BB810DA421B8409E00A4D2A2 /* User.swift in Sources */,
 				BB810DA021B636F800A4D2A2 /* Cells.swift in Sources */,
 				BB810D9921B61C8300A4D2A2 /* HomeController.swift in Sources */,
 				BB810D8721B61C5100A4D2A2 /* AppDelegate.swift in Sources */,

@@ -47,9 +47,12 @@ class UserHeader: DatasourceCell {
 
 class UserCell: DatasourceCell {
     
-    override var datasourceItem: Any?{
-        didSet {
-//            nameLabel.text = datasourceItem as? String
+    override var datasourceItem: Any? {
+        didSet{
+            guard let user = datasourceItem as! User? else { return }
+            nameLabel.text = user.name
+            userNameLabel.text = user.username
+            bioTextView.text = user.website
         }
     }
     

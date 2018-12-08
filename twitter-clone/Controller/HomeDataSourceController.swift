@@ -8,13 +8,34 @@
 
 import Foundation
 import LBTAComponents
+import Alamofire
 
 class HomeDataSourceController: DatasourceController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dataSource = HomeDataSource()
-        self.datasource = dataSource
+        getUsers { (users) in
+            self.datasource = HomeDataSource(users: users)
+        }
+        
+    }
+    
+    func getUsers(completion: @escaping (_ users: [User]) -> ()){
+        
+        Alamofire.request("https://jsonplaceholder.typicode.com/users", method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { response in
+            
+            let decoder = JSONDecoder()
+            
+            do {
+                let users = try decoder.decode([User].self, from: response.data!) as [User]
+                
+                completion(users)
+                
+            }catch{
+                
+            }
+            
+        })
         
     }
     
@@ -29,6 +50,5 @@ class HomeDataSourceController: DatasourceController{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: 100)
     }
-    
     
 }
