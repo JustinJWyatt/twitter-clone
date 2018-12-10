@@ -9,6 +9,8 @@
 import Foundation
 import LBTAComponents
 import Alamofire
+import AlamofireObjectMapper
+
 
 class HomeDataSourceController: DatasourceController{
     override func viewDidLoad() {
@@ -17,26 +19,13 @@ class HomeDataSourceController: DatasourceController{
         getUsers { (users) in
             self.datasource = HomeDataSource(users: users)
         }
-        
     }
     
-    func getUsers(completion: @escaping (_ users: [User]) -> ()){
+    func getUsers(completion: @escaping (_ users: [Result]) -> ()){
         
-        Alamofire.request("https://jsonplaceholder.typicode.com/users", method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { response in
-            
-            let decoder = JSONDecoder()
-            
-            do {
-                let users = try decoder.decode([User].self, from: response.data!) as [User]
-                
-                completion(users)
-                
-            }catch{
-                
-            }
-            
-        })
-        
+        Alamofire.request("https://randomuser.me/api/?results=10", method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseObject { (response: DataResponse<UserResult>) in
+            completion(response.result.value!.results!)
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

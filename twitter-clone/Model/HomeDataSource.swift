@@ -12,11 +12,11 @@ import Alamofire
 
 class HomeDataSource: Datasource {
     
-    init(users: [User]){
+    init(users: [Result]){
         self.users = users
     }
     
-    var users = [User]()
+    var users = [Result]()
     
     override func headerClasses() -> [DatasourceCell.Type]? {
         return [UserHeader.self]

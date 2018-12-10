@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B926D0F5BCC6188690C7D3D4 /* Pods_twitter_clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077134FCD91C69D53A4972C8 /* Pods_twitter_clone.framework */; };
-		BB31ECF221BC1AFE00CC374B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB31ECF121BC1AFE00CC374B /* Environment.swift */; };
 		BB810D8721B61C5100A4D2A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810D8621B61C5100A4D2A2 /* AppDelegate.swift */; };
 		BB810D8C21B61C5100A4D2A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB810D8A21B61C5100A4D2A2 /* Main.storyboard */; };
 		BB810D8E21B61C5200A4D2A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB810D8D21B61C5200A4D2A2 /* Assets.xcassets */; };
@@ -17,14 +16,13 @@
 		BB810D9B21B6321300A4D2A2 /* HomeDataSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810D9A21B6321300A4D2A2 /* HomeDataSourceController.swift */; };
 		BB810DA021B636F800A4D2A2 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810D9F21B636F800A4D2A2 /* Cells.swift */; };
 		BB810DA221B6372500A4D2A2 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810DA121B6372500A4D2A2 /* HomeDataSource.swift */; };
-		BB810DA421B8409E00A4D2A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810DA321B8409E00A4D2A2 /* User.swift */; };
+		BB810DA421B8409E00A4D2A2 /* UserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810DA321B8409E00A4D2A2 /* UserResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		077134FCD91C69D53A4972C8 /* Pods_twitter_clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitter_clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB02F4B808B7DB8675D8E1B /* Pods-twitter-clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter-clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitter-clone/Pods-twitter-clone.release.xcconfig"; sourceTree = "<group>"; };
 		A2EA31583E90B642877731AA /* Pods-twitter-clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter-clone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitter-clone/Pods-twitter-clone.debug.xcconfig"; sourceTree = "<group>"; };
-		BB31ECF121BC1AFE00CC374B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		BB810D8321B61C5100A4D2A2 /* twitter-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "twitter-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB810D8621B61C5100A4D2A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB810D8B21B61C5100A4D2A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,7 +33,7 @@
 		BB810D9A21B6321300A4D2A2 /* HomeDataSourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSourceController.swift; sourceTree = "<group>"; };
 		BB810D9F21B636F800A4D2A2 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		BB810DA121B6372500A4D2A2 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
-		BB810DA321B8409E00A4D2A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BB810DA321B8409E00A4D2A2 /* UserResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +95,6 @@
 				BB810D8D21B61C5200A4D2A2 /* Assets.xcassets */,
 				BB810D8F21B61C5200A4D2A2 /* LaunchScreen.storyboard */,
 				BB810D9221B61C5200A4D2A2 /* Info.plist */,
-				BB31ECF121BC1AFE00CC374B /* Environment.swift */,
 			);
 			path = "twitter-clone";
 			sourceTree = "<group>";
@@ -114,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				BB810DA121B6372500A4D2A2 /* HomeDataSource.swift */,
-				BB810DA321B8409E00A4D2A2 /* User.swift */,
+				BB810DA321B8409E00A4D2A2 /* UserResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,14 +203,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-twitter-clone/Pods-twitter-clone-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -251,8 +252,7 @@
 			files = (
 				BB810DA221B6372500A4D2A2 /* HomeDataSource.swift in Sources */,
 				BB810D9B21B6321300A4D2A2 /* HomeDataSourceController.swift in Sources */,
-				BB810DA421B8409E00A4D2A2 /* User.swift in Sources */,
-				BB31ECF221BC1AFE00CC374B /* Environment.swift in Sources */,
+				BB810DA421B8409E00A4D2A2 /* UserResult.swift in Sources */,
 				BB810DA021B636F800A4D2A2 /* Cells.swift in Sources */,
 				BB810D9921B61C8300A4D2A2 /* HomeController.swift in Sources */,
 				BB810D8721B61C5100A4D2A2 /* AppDelegate.swift in Sources */,

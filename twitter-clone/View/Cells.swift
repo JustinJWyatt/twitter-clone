@@ -49,10 +49,11 @@ class UserCell: DatasourceCell {
     
     override var datasourceItem: Any? {
         didSet{
-            guard let user = datasourceItem as! User? else { return }
-            nameLabel.text = user.name.first + " " + user.name.last
+            guard let user = datasourceItem as! Result? else { return }
+            nameLabel.text = user.name!.first! + " " + user.name!.last!
             userNameLabel.text = user.email
-            bioTextView.text = user.name.first
+            bioTextView.text = user.name!.first
+            
         }
     }
     
