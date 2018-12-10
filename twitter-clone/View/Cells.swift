@@ -54,12 +54,19 @@ class UserCell: DatasourceCell {
             userNameLabel.text = user.email
             bioTextView.text = user.name!.first
             
+            if ((user.picture) != nil) {
+                
+                let url = URL(string: user.picture!.thumbnail!)
+                let imageData = NSData(contentsOf: url!)
+                profileImageView.image = UIImage(data: imageData! as Data)
+            }
+            
         }
     }
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "profile5")
+//        imageView.image = UIImage(named: "profile5")
         imageView.layer.cornerRadius = 5
         imageView.layer.masksToBounds = true
         imageView.contentMode = ContentMode.scaleAspectFill
