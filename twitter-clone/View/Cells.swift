@@ -40,6 +40,8 @@ class UserHeader: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
         addSubview(textLabel)
         textLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
@@ -52,7 +54,7 @@ class UserCell: DatasourceCell {
             guard let user = datasourceItem as! Result? else { return }
             nameLabel.text = user.name!.first! + " " + user.name!.last!
             userNameLabel.text = user.email
-            bioTextView.text = user.name!.first
+//            bioTextView.text = user.name!.first
             
             if ((user.picture) != nil) {
                 
@@ -89,6 +91,7 @@ class UserCell: DatasourceCell {
     
     let bioTextView: UITextView = {
        let textView = UITextView()
+        textView.text = "This is some bio information. This will be populated from the bio information on their account"
         textView.backgroundColor = UIColor.clear
         textView.font = UIFont.systemFont(ofSize: 15)
         return textView
@@ -109,6 +112,9 @@ class UserCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
         
         addSubview(profileImageView)
         addSubview(nameLabel)
